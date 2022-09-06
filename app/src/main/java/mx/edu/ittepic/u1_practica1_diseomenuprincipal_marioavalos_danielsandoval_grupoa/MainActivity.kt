@@ -31,6 +31,10 @@ class MainActivity : AppCompatActivity() {
             compra("Jitomates","¿Cuántos jitomates deseas comprar?",1,4)
         }
 
+        nosotros.setOnClickListener {
+            AlertDialog.Builder(this).setMessage("Mario Alberto Avalos Rodríguez\nDaniel Sandoval Alvarez")
+                .show()
+        }
     }
 
     fun agregarCarrito(p: Int){
