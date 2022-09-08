@@ -1,5 +1,6 @@
 package mx.edu.ittepic.u1_practica1_diseomenuprincipal_marioavalos_danielsandoval_grupoa
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -32,8 +33,22 @@ class MainActivity : AppCompatActivity() {
         }
 
         nosotros.setOnClickListener {
-            AlertDialog.Builder(this).setMessage("Mario Alberto Avalos Rodríguez\nDaniel Sandoval Alvarez")
+            AlertDialog.Builder(this).setTitle("Acerca de...")
+                .setMessage("Mario Alberto Avalos Rodríguez\nDaniel Sandoval Alvarez")
+                .setNeutralButton("OK") {d,i ->
+                    d.dismiss()
+                }
                 .show()
+        }
+
+        perfil.setOnClickListener {
+            val iniciosesion = Intent(this,MainActivity2::class.java)
+            startActivity(iniciosesion)
+        }
+
+        ajustes.setOnClickListener {
+            val ventanaAjustes = Intent(this,MainActivity3::class.java)
+            startActivity(ventanaAjustes)
         }
     }
 
