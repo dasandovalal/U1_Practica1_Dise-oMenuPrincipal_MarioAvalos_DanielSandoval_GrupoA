@@ -44,4 +44,16 @@
         android:paddingVertical="10dp"
         android:paddingHorizontal="30dp"
         android:backgroundTint="#FFC107"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Regresar"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="30dp"
+        android:backgroundTint="#FFC107"
+        android:id="@+id/regresar"/>
 </LinearLayout>

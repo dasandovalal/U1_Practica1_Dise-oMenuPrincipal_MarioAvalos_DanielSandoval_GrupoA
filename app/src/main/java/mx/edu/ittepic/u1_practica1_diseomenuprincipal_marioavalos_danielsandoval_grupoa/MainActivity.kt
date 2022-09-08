@@ -50,6 +50,10 @@ class MainActivity : AppCompatActivity() {
             val ventanaAjustes = Intent(this,MainActivity3::class.java)
             startActivity(ventanaAjustes)
         }
+
+        pago.setOnClickListener {
+            Toast.makeText(this, "Se agregara proximamente", Toast.LENGTH_LONG).show()
+        }
     }
 
     fun agregarCarrito(p: Int){
