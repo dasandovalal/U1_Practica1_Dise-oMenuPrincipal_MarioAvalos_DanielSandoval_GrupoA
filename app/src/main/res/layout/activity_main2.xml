@@ -43,7 +43,8 @@
         android:textSize="20sp"
         android:paddingVertical="10dp"
         android:paddingHorizontal="30dp"
-        android:backgroundTint="#FFC107"/>
+        android:backgroundTint="#FFC107"
+        android:id="@+id/login"/>
 
     <Button
         android:layout_width="wrap_content"

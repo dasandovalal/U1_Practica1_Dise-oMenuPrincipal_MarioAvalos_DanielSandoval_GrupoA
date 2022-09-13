@@ -54,6 +54,7 @@ class MainActivity : AppCompatActivity() {
         pago.setOnClickListener {
             Toast.makeText(this, "Se agregara proximamente", Toast.LENGTH_LONG).show()
         }
+        carrito.setOnClickListener { comprar() }
     }
 
     fun agregarCarrito(p: Int){
@@ -70,6 +71,16 @@ class MainActivity : AppCompatActivity() {
             .setPositiveButton(p.toString(),{d,i->agregarCarrito(p)})
             .setNeutralButton("Cancelar",{d,i->d.dismiss()})
             .show()
+    }
+
+    fun comprar(){
+        if (carro>0){
+            Toast.makeText(this,"Tu comprá será enviada de inmediato",Toast.LENGTH_LONG).show()
+            carro=0
+            productos.setText("(  ${carro.toString()}  )")
+        }else{
+            Toast.makeText(this,"Favor de agregar productos al carrito",Toast.LENGTH_LONG).show()
+        }
     }
 
 }
